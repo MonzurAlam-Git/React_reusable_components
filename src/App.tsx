@@ -11,9 +11,8 @@ function App() {
       <button className="btn btn-primary">primary</button>
       <Button
         buttonName={"clsxTest"}
-        className={"bg-cyan-500"}
-        outline="true"
-        // variant="danger"
+        className={"w-[480px]"}
+        variant="ghost"
       ></Button>
     </Container>
   );

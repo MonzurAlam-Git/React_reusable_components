@@ -12,18 +12,22 @@ import cn from "../../utils/cn";
 */
 /* Pattern of Clsx : clsx() */
 
-const Button = ({ buttonName, className, outline }) => {
+const Button = ({ buttonName, className, variant }) => {
+  const getVariant = (variant) => {
+    switch (variant) {
+      case "outline":
+        return "btn-outline";
+      case "ghost":
+        return "btn-ghost";
+
+      default:
+        return "btn";
+    }
+  };
+
   return (
     /* the last className will execute */
-    <button
-      className={cn(
-        "px-3 py-2 font-bold text-white",
-        {
-          "border border-black": outline,
-        },
-        className
-      )}
-    >
+    <button className={cn("btn", getVariant(variant), className)}>
       {buttonName}
     </button>
   );
