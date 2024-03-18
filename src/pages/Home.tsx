@@ -1,9 +1,9 @@
 const Home = () => {
   return (
     <div>
-      <h1 className="text-2xl text-center font-bold">Home Component</h1>
+      <h1>Home Component</h1>
+      <button className="btn btn-primary">Primary</button>
     </div>
   );
 };
-
 export default Home;
